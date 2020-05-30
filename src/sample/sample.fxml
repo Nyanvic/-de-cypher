@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <AnchorPane prefHeight="63.0" prefWidth="600.0" style="-fx-background-color: #042069;">
+         <children>
+            <Label layoutX="142.0" layoutY="1.0" prefHeight="68.0" prefWidth="322.0" text="(ДЕ)ШИФРАТОР" textAlignment="RIGHT" textFill="#abb5a2">
+               <font>
+                  <Font name="Calibri" size="46.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Button fx:id="en_de_cipher" layoutX="176.0" layoutY="211.0" mnemonicParsing="false" onAction="#cipher" prefHeight="70.0" prefWidth="248.0" text="ДЕШИФРОВАТЬ" textFill="#2ba121">
+         <font>
+            <Font name="Calibri" size="30.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TextField fx:id="code_key" layoutX="177.0" layoutY="174.0" onInputMethodTextChanged="#keycode" prefHeight="16.0" prefWidth="248.0" promptText="Код-ключ">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
+      <TextField fx:id="fileName" layoutX="177.0" layoutY="137.0" prefHeight="16.0" prefWidth="185.0" promptText="Файл">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
+      <Button fx:id="OpenFileManager" layoutX="362.0" layoutY="137.0" mnemonicParsing="false" onAction="#browser" prefHeight="16.0" prefWidth="63.0" text="Выбрать">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TextField fx:id="control_sum" layoutX="176.0" layoutY="211.0" onInputMethodTextChanged="#keycode" prefHeight="25.0" prefWidth="248.0" promptText="Контольная сумма" visible="false">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
+      <Button fx:id="benchmark" layoutX="177.0" layoutY="94.0" mnemonicParsing="false" onAction="#startbench" prefHeight="25.0" prefWidth="248.0" text="Benchmark" />
+      <Text fx:id="benchresult" disable="true" layoutX="177.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="248.0" />
+      <Text fx:id="benchresult1" disable="true" layoutX="157.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="288.0" />
+   </children>
+</AnchorPane>
